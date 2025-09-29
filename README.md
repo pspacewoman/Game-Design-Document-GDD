@@ -1,73 +1,87 @@
-# Game-Design-Document-GDD
+## Game Design Document Bundle
 What the game is, how it plays, its systems, features, and design decisions. Concept clarity and communication with the team.
 
-
 # 🎮 Game Design Document (GDD)
-**Project Title:** [General]  
-**Version:** 1.0  
+
+**Projects:**
+**Version:** 1.0 
 **Author:** Priyanshi Singh  
-**Date:** [29/09/2025]  
+
+a. Emergency Quest (VR) — Master Thesis prototype
+b. DeadZone — FPS 3D Shooter
+c. 3D Solar System — Interactive Simulation
 
 ---
 
-## 1. High Concept
-- One-sentence summary: *[Describe game in 1–2 lines]*  
-- Genre: *FPS / VR Training / Simulation / Strategy / Puzzle*  
-- Platform: *Unity – Meta Quest / WebGL / Desktop*  
-- Target Audience: *[Who is this for? Students, gamers, trainees]*  
-- Unique Selling Point (USP): *[What makes it different?]*  
+Table of contents-
+
+1. Emergency Quest (VR)
+2. DeadZone — FPS
+3. 3D Solar System
+4. Common repo & workflow templates
+5. Playtesting, metrics & accessibility
+6. Export to GitHub quick-start checklist
 
 ---
 
-## 2. Core Gameplay
-- **Player Role:** *What is the player’s character/perspective?*  
-- **Objective:** *What is the win condition?*  
-- **Core Loop:**  
-  1. [Step 1]  
-  2. [Step 2]  
-  3. [Step 3]  
+## Emergency Quest (VR)
+Overview / Elevator Pitch:
 
----
+Emergency Quest is an immersive VR training game for Meta Quest devices where players respond to road-accident scenarios to practice first-aid, triage, and decision-making under pressure. The game combines realistic environments, NPC animations, and guided feedback for learning outcomes.
 
-## 3. Mechanics
-- **Movement & Controls:** *Keyboard/mouse, controller, XR hand-tracking*  
-- **Interactions:** *Pick up, place, shoot, rotate, heal, build*  
-- **Progression System:** *Levels, XP, unlockables, achievements*  
-- **Game Economy / Balance:** *Resources, cooldowns, rewards, monetization (if F2P)*  
-- **Failure & Success States:** *What happens on win/loss?*  
+## Target audience & learning goals
 
----
+- Primary: learners and trainees (medical volunteers, high school/uni safety programs).
+- Secondary: general VR players interested in realistic simulations.
+- Learning goals: recognize accident types, triage priority, apply basic first-aid (CPR, bleeding control), and practice communication & empathy.
 
-## 4. World & Setting
-- **Environment:** *Urban city, sci-fi arena, realistic accident scene*  
-- **Story / Theme:** *Brief narrative or scenario*  
-- **NPCs / Characters:** *Description, behavior, AI logic*  
+## Core gameplay loop
+- Receive dispatch & move to accident scene.
+- Assess victims & environmental hazards.
+- Apply first-aid actions (bandaging, CPR, stop bleeding, repositioning).
+- Get scored on correctness, time, and safety.
+- Receive instructor feedback, repeat with adjusted difficulty.
 
----
+## Key features (MVP / v1 / stretch)
+- MVP: 3 accident scenarios (car crash, bike collision, pedestrian fall), interactive tools (bandage, tourniquet, CPR), scoring & instructor HUD.
+- v1: Branching scenarios, NPC dialogue trees, environmental hazards (fire, broken glass), replayable scenarios with analytics.
+- Stretch: Multiplayer instructor mode, learning management system (LMS) export, adaptive difficulty via analytics.
 
-## 5. User Interface
-- **HUD Elements:** *Health, ammo, timer, score*  
-- **Menus:** *Start, pause, settings*  
-- **Feedback Systems:** *Popups, audio cues, highlights*  
+## Controls & interaction
+- XR Interaction Toolkit interactable objects (grab, place, use).
+- Teleport + smooth locomotion toggle for comfort.
+- Contextual radial menu for tools and instructions.
+- Haptics for success/failure feedback.
 
----
+## Level design & flow
+- Intro tutorial (tool use, movement).
+- Scenario 1: simple single-victim — focus on assessment.
+- Scenario 2: multi-victim — prioritization & triage.
+- Scenario 3: environmental hazard — scene safety, extrication.
 
-## 6. Technical Overview
-- **Engine:** Unity (Version X.X)  
-- **Tools & Assets:** *NavMesh, XR Toolkit, prefabs, C# scripts*  
-- **Deployment Platforms:** *Meta Quest, WebGL, Desktop*  
+## Story & Characters
+- Non-heavy story; scenario-based vignettes with short hero NPCs and a dispatcher voice guiding players.
 
----
+## Art & Audio
+- Semi-realistic low-poly assets mixed with high-fidelity audio cues (breathing, groans, ambient traffic).
+- UI: diegetic hints + non-diegetic HUD for scores and instructions.
 
-## 7. Playtesting & Iteration
-- Playtest audience: *Who tested the game?*  
-- Key findings: *[What issues were identified?]*  
-- Iterations: *[What improvements were made?]*  
+## Technical spec & Unity notes
+- Engine: Unity LTS (recommended 2022.3+ or latest LTS at start). Use URP for performance on Quest.
+- Target: Meta Quest 3 / Quest 2 (build configs included).
+- Packages: XR Interaction Toolkit, Oculus Integration / Meta XR SDK, Cinemachine, TextMeshPro, DOTS (optional), Unity Analytics or a lightweight custom telemetry.
+- Physics: Rigidbody-based interactions, kinematic ragdoll transitions for NPCs.
 
----
+## UX & Usability (important for training)
+- Comfort options: teleport/smooth locomotion, vignetting, adjustable height.
+- Tutorials with guided hands-on practice.
+- Clear feedback and post-scenario debrief screens.
 
-## 8. References & Inspirations
-- Similar games: *[List titles you referenced]*  
-- Research basis: *[Any UX/HCI principles applied]*  
+## Playtesting & evaluation plan
+- Iterative usability tests using task completion metrics and surveys.
+- Logging: time-to-first-action, errors, incorrect procedures, tool selection path.
+
+## Accessibility
+Subtitles and large text options, color-blind-friendly palettes, options for left/right handedness.
 
 ---
