@@ -15,7 +15,7 @@ c. 3D Solar System — Interactive Simulation
 
 Table of contents-
 
-1. Emergency Quest (VR)
+1. Emergency Quest (VR) Game
 2. DeadZone — FPS
 3. 3D Solar System
 4. Common repo & workflow templates
@@ -24,7 +24,7 @@ Table of contents-
 
 ---
 
-## Emergency Quest (VR)
+## Emergency Quest (VR) Game
 Overview / Elevator Pitch:
 
 Emergency Quest is an immersive VR training game for Meta Quest devices where players respond to road-accident scenarios to practice first-aid, triage, and decision-making under pressure. The game combines realistic environments, NPC animations, and guided feedback for learning outcomes.
